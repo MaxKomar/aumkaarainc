@@ -1,0 +1,236 @@
+@import "variables";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $font-color;
+  margin: 0;
+}
+
+.pageWrapper {
+  max-width: 1440px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  max-width: 1440px;
+  height: 0;
+
+  @include tablet {
+    display: none;
+  }
+
+  .headImg {
+    position: absolute;
+    top: 0;
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  .navigation {
+    padding: 20px 64px 0 0;
+    text-align: right;
+
+    ul {
+      list-style: none;
+
+      li {
+        cursor: pointer;
+        font-size: 19px;
+        line-height: 44px;
+        transition: color .2s;
+
+        &:hover {
+          color: $yellow;
+        }
+
+        &.active {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  margin: 0 $right-margin 0 $left-margin;
+  padding: 100px 32px 300px;
+  box-sizing: border-box;
+
+  @include tablet {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .flash {
+    text-align: center;
+
+    img {
+      max-width: 98%;
+    }
+  }
+
+  .home-text {
+    width: 70%;
+    margin: 0 auto;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  &__header {
+    color: $blue;
+    font-size: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid black;
+    font-family: $textGyre;
+  }
+
+  &__body {
+
+    &--company {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .text {
+        margin: 0;
+        padding: 24px 0;
+        flex: 0 0 31%;
+        text-align: justify;
+
+        .title {
+          font-size: 20px;
+          font-weight: 700;
+          padding-bottom: 24px;
+        }
+
+        @include tablet {
+          flex: 0 0 48%;
+        }
+
+        @include mobile {
+          flex: 0 0 100%;
+          padding-top: 0;
+          &:first-child {
+            padding-top: 24px;
+          }
+        }
+
+        span {
+          display: block;
+          &:not(:last-child) {
+            padding-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+    border-bottom-right-radius: 76px;
+    border-bottom: 6px solid $blue;
+    border-right: 6px solid $blue;
+    height: 188px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 184px;
+
+    @include tablet {
+      height: 100px;
+      margin-top: 48px;
+    }
+
+    @include mobile {
+      margin-top: 24px;
+      border-bottom-width: 3px;
+      border-right-width: 3px;
+      border-bottom-right-radius: 24px;
+    }
+
+    .homeCompanyLogo {
+      max-height: 40px;
+      padding: 8px 8px;
+
+      @include tablet {
+        max-height: 30px;
+      };
+
+      @include mobile {
+        max-height: 20px;
+      }
+    }
+
+    &_text {
+
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+
+      @include tablet {
+        font-size: 20px;
+      }
+      @include mobile {
+        font-size: 16px;
+      }
+
+      .blue {
+        color: $blue;
+      }
+
+      .yellow {
+        color: $yellow;
+      }
+    }
+
+    &_image {
+      position: absolute;
+      right: 7%;
+      bottom: 24%;
+
+      @include tablet {
+        width: 24%;
+      }
+
+    }
+  }
+
+  &#home {
+    .section__footer {
+      margin-top: 20px;
+      @include mobile {
+        border-bottom-width: 0;
+        border-right-width: 0;
+      }
+    }
+  }
+}

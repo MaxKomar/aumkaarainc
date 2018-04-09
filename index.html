@@ -3,8 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <title>Aumkaarainc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
 </head>
 <body>
-    test
+<div class="pageWrapper">
+    <header class="header">
+        <div class="headImg left">
+            <img src="assets/logo_left.png">
+            <nav class="navigation">
+                <ul>
+                    <li data-section="home">Home</li>
+                    <li data-section="company">Company</li>
+                    <li>Work</li>
+                    <li data-section="services">Services</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+
+        <img src="assets/logo_right.png" class="headImg right">
+    </header>
+    <section class="section" id="home">
+        <div class="flash">
+            <img src="assets/flash.png">
+        </div>
+        <p class="home-text">We provide high-quality professional services in software engineering and information
+            technology to facilitate the success of our client’s projects, applications, processes and
+            infrastructure.</p>
+        <div class="section__footer">
+            <img class="homeCompanyLogo" src="assets/logo_1.png">
+            <img class="homeCompanyLogo" src="assets/logo_2.png">
+            <img class="homeCompanyLogo" src="assets/logo_3.png">
+            <img class="homeCompanyLogo" src="assets/logo_4.png">
+            <p class="section__footer_text"><span class="blue">creating</span> <span
+                    class="yellow">intrinsic value</span></p>
+        </div>
+    </section>
+    <section class="section" id="company">
+        <div class="section__header">
+            company
+        </div>
+        <div>
+            <div class="section__body section__body--company">
+                <p class="text">
+                    <span>We are a professional services company
+                    with the collective capacity of it’s people
+                    to create intrinsic value, by executing
+                    business tasks - better, faster, more often
+                    and more productively.</span>
+                    <span>We combine a careful blend of technical
+                    finesse, close communication and realworld
+                    common sense to help some
+                    incredibly cool and innovative companies
+                    build the most dynamic yet robust software
+                    applications, products and systems.</span>
+                </p>
+                <p class="text">
+                    <span>Our perspective begins at eye level - with
+                    a clear understanding of our clients software
+                    and information technology project objectives
+                    and deliverables, the way you work, your
+                    goals and your challenges.</span>
+                    <span>Our responsibility to our clients is delivering
+                    value-added professional services using
+                    our hands-on approach and relentless
+                    focus on execution and tangible results.</span>
+                </p>
+                <p class="text">
+                    And many of our new engagements come
+                    from existing clients - a testament to our
+                    ability to consistently deliver results.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="section__footer">
+            <p class="section__footer_text"><span class="blue">experience</span> <span
+                    class="yellow">our commitment</span></p>
+            <img src="assets/CompanyIMG.jpg" class="section__footer_image">
+        </div>
+    </section>
+    <section class="section" id="services">
+        <div class="section__header">
+            services
+        </div>
+        <div>
+            <div class="section__body section__body--company">
+                <p class="text">
+                    <span class="title">enterprise application development</span>
+                    <span>
+                        Software has become critical to advancement in almost all areas of human endeavor and today’s software applications are far more complex; typically have graphical user interface and client-server architecture.
+                    </span>
+                    <span>
+                        From smart customization of pre-developed cross-platform standalone and client-server business applications to full-cycle development of feature-rich web applications along our client’s vision, we are uniquely positioned to deliver cost effective and reliable software solutions.
+                    </span>
+                    <span>
+                        Our expertise comprises a comprehensive set of open-source and proprietary technologies that allows us to execute the most challenging and complex projects and satisfy our client’s requirements, preferences and expectations.
+                    </span>
+                </p>
+                <p class="text">
+                    <span class="title">
+                        project management & analysis
+                    </span>
+                    <span>
+                        The management of software development is heavily dependent on four factors: People, Product, Process, and Project and in the Order of Dependency, the people factor ranks number one.
+                    </span>
+                    <span>
+                        Software development being a people centric activity requires good, competent project managers, and the manager selection is most crucial and critical.
+                    </span>
+                    <span>
+                        We provide mature and quality project management services focusing on vital elements like project communication, requirements gathering, knowledge transfer and change and risk management and reporting.
+                    </span>
+                </p>
+                <p class="text">
+                    <span class="title">
+                        technology infrastructure services
+                    </span>
+                    <span>
+                        Sound infrastructure is a fundamental requirement for delivering the applications which make business efficient, competitive and adaptable. With that in mind, we offer range of services to clients endeavoring to advance the capabilities of their existing secure, 24x7, high available information technology infrastructure and services.
+                    </span>
+                    <span>
+                        Our services areas cover Middleware and Web Services Engineering; Network Engineering, Operations and Support; Server and Storage Engineering, and Desktop Services.
+                    </span>
+                    <span>
+                        Robust security is a must to protect vital data and minimize risk, as new threats emerge all the time. We respond with security services including information security management, intrusion detection and protection, penetration testing management and support.
+                    </span>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="section__footer">
+            <p class="section__footer_text"><span class="blue">producing</span> <span
+                    class="yellow">tangible results</span></p>
+            <img src="assets/ServiceIMG.jpg" class="section__footer_image">
+        </div>
+    </section>
+</div>
+<script>
+    $("nav ul li").click(function () {
+        $("nav ul li.active").removeClass('active');
+        this.classList.add('active');
+        $('html, body').animate({
+            scrollTop: $("#" + this.dataset.section).offset().top
+        }, 1000);
+    });
+</script>
 </body>
 </html>
