@@ -5,10 +5,13 @@
     <title>Aumkaarainc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 <body>
 <div class="pageWrapper">
@@ -21,7 +24,7 @@
                     <li data-section="company">Company</li>
                     <li>Work</li>
                     <li data-section="services">Services</li>
-                    <li>Contact</li>
+                    <li data-section="contact">Contact</li>
                 </ul>
             </nav>
         </div>
@@ -106,6 +109,16 @@
                     <span>
                         Our expertise comprises a comprehensive set of open-source and proprietary technologies that allows us to execute the most challenging and complex projects and satisfy our client’s requirements, preferences and expectations.
                     </span>
+                    <ul class="list showMobileOnly">
+                        <li>Client Server</li>
+                        <li>Java, J2EE, JMS, Perl, PL/SQL, SQL</li>
+                        <li>C, C++, Cocoa, Objective C, OOP</li>
+                        <li>Web</li>
+                        <li>JavaScript, Ajax, HTML, CSS, jQuery</li>
+                        <li>EJB, JSP, Struts, Spring, Hibernate, XML</li>
+                        <li>Mobile</li>
+                        <li>Objective C, iPhone SDK</li>
+                    </ul>
                 </p>
                 <p class="text">
                     <span class="title">
@@ -120,6 +133,17 @@
                     <span>
                         We provide mature and quality project management services focusing on vital elements like project communication, requirements gathering, knowledge transfer and change and risk management and reporting.
                     </span>
+                <ul class="list showMobileOnly">
+                    <li>Technical Project Management</li>
+                    <li>Project Lead, PMO</li>
+                    <li>Manager (Applications, Development)</li>
+                    <li>Manager (Database, Networking)</li>
+                    <li>Manager (Security, QA)</li>
+                    <li>Technical requirements</li>
+                    <li>System Documentation</li>
+                    <li>Business Analysis</li>
+                    <li>Functional and Design Specification </li>
+                </ul>
                 </p>
                 <p class="text">
                     <span class="title">
@@ -134,7 +158,76 @@
                     <span>
                         Robust security is a must to protect vital data and minimize risk, as new threats emerge all the time. We respond with security services including information security management, intrusion detection and protection, penetration testing management and support.
                     </span>
+                <ul class="list showMobileOnly">
+                    <li>Authentication, Authorization</li>
+                    <li>Access Control, LDAP </li>
+                    <li>Centralized Server, Disk Storage </li>
+                    <li>Network Backup </li>
+                    <li>LAN/WAN Configuration/Support </li>
+                    <li>Firewall Configuration/Support </li>
+                    <li>Load balancers </li>
+                    <li>Directory Services </li>
+                    <li>Identity Management </li>
+                    <li>Solaris, Linux, Windows OS </li>
+                    <li>Weblogic, Websphere, Jboss </li>
+                    <li>Tomcat, Apache, IIS </li>
+                    <li>EMC, Hitachi, Brocade </li>
+                    <li>Cisco, Foundry, Juniper </li>
+                    <li>Citrix/Netscalar </li>
+                    <li>Cryptography </li>
+                    <li>Vulnerability Assessment </li>
+                    <li>NOC/Technical Support </li>
+                </ul>
                 </p>
+            </div>
+            <div class="section__body section__body--company hideMobile">
+                <div class="section__body__slideHeader">
+                    Service Checklist
+                    <img src="assets/buttonA1.png">
+                </div>
+            </div>
+            <div class="section__body--company" id="slideToggle" style="display: none">
+                <ul class="list">
+                    <li>Client Server</li>
+                    <li>Java, J2EE, JMS, Perl, PL/SQL, SQL</li>
+                    <li>C, C++, Cocoa, Objective C, OOP</li>
+                    <li>Web</li>
+                    <li>JavaScript, Ajax, HTML, CSS, jQuery</li>
+                    <li>EJB, JSP, Struts, Spring, Hibernate, XML</li>
+                    <li>Mobile</li>
+                    <li>Objective C, iPhone SDK</li>
+                </ul>
+                <ul class="list">
+                    <li>Technical Project Management</li>
+                    <li>Project Lead, PMO</li>
+                    <li>Manager (Applications, Development)</li>
+                    <li>Manager (Database, Networking)</li>
+                    <li>Manager (Security, QA)</li>
+                    <li>Technical requirements</li>
+                    <li>System Documentation</li>
+                    <li>Business Analysis</li>
+                    <li>Functional and Design Specification </li>
+                </ul>
+                <ul class="list">
+                    <li>Authentication, Authorization</li>
+                    <li>Access Control, LDAP </li>
+                    <li>Centralized Server, Disk Storage </li>
+                    <li>Network Backup </li>
+                    <li>LAN/WAN Configuration/Support </li>
+                    <li>Firewall Configuration/Support </li>
+                    <li>Load balancers </li>
+                    <li>Directory Services </li>
+                    <li>Identity Management </li>
+                    <li>Solaris, Linux, Windows OS </li>
+                    <li>Weblogic, Websphere, Jboss </li>
+                    <li>Tomcat, Apache, IIS </li>
+                    <li>EMC, Hitachi, Brocade </li>
+                    <li>Cisco, Foundry, Juniper </li>
+                    <li>Citrix/Netscalar </li>
+                    <li>Cryptography </li>
+                    <li>Vulnerability Assessment </li>
+                    <li>NOC/Technical Support </li>
+                </ul>
             </div>
         </div>
 
@@ -143,6 +236,9 @@
                     class="yellow">tangible results</span></p>
             <img src="assets/ServiceIMG.jpg" class="section__footer_image">
         </div>
+    </section>
+    <section class="section" id="contact">
+
     </section>
 </div>
 <script>
@@ -153,6 +249,13 @@
             scrollTop: $("#" + this.dataset.section).offset().top
         }, 1000);
     });
+
+
+    $('.section__body__slideHeader').click(function(){
+        console.log($('.section__body__slideHeader'));
+        $('.section__body__slideHeader').toggleClass('active');
+        $('#slideToggle').slideToggle(1000)
+    })
 </script>
 </body>
 </html>
