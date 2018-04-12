@@ -77,7 +77,17 @@ body {
     font-size: 48px;
     padding-bottom: 24px;
     border-bottom: 1px solid black;
-    font-family: texgyreadventor, Helvetica, sans-serif; }
+    font-family: texgyreadventor, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .section__header .nav img {
+      cursor: pointer;
+      height: 18px;
+      padding: 4px; }
+    @media (max-width: 480px) {
+      .section__header .nav {
+        display: none; } }
   .section__body--company {
     display: flex;
     flex-wrap: wrap;
@@ -85,8 +95,12 @@ body {
     .section__body--company .text {
       margin: 0;
       padding: 24px 0;
+      outline: none !important;
       flex: 0 0 31%;
       text-align: justify; }
+      .section__body--company .text.slick-slide {
+        padding-left: 8px;
+        padding-right: 8px; }
       .section__body--company .text .title {
         font-size: 20px;
         font-weight: 700;

@@ -107,6 +107,21 @@ body {
     padding-bottom: 24px;
     border-bottom: 1px solid black;
     font-family: $textGyre;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav {
+
+      img {
+        cursor: pointer;
+        height: 18px;
+        padding: 4px;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
   }
 
   &__body {
@@ -119,8 +134,14 @@ body {
       .text {
         margin: 0;
         padding: 24px 0;
+        outline: none !important;
         flex: 0 0 31%;
         text-align: justify;
+
+        &.slick-slide {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
 
         .title {
           font-size: 20px;

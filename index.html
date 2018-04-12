@@ -22,7 +22,7 @@
                 <ul>
                     <li data-section="home">Home</li>
                     <li data-section="company">Company</li>
-                    <li>Work</li>
+                    <li data-section="work">Work</li>
                     <li data-section="services">Services</li>
                     <li data-section="contact">Contact</li>
                 </ul>
@@ -92,13 +92,76 @@
             <img src="assets/CompanyIMG.jpg" class="section__footer_image">
         </div>
     </section>
+    <section class="section" id="work">
+        <div class="section__header">
+            work
+            <div class="nav">
+                <img id="workPrev" src="assets/PREV.png">
+                <img id="workNext" src="assets/NEXT.png">
+            </div>
+        </div>
+        <div>
+            <div class="section__body section__body--company" id="sliderWork">
+                <div class="text">
+                    <span class="title">enterprise application development</span>
+                    <span>
+                        Software has become critical to advancement in almost all areas of human endeavor and today’s software applications are far more complex; typically have graphical user interface and client-server architecture.
+                    </span>
+                    <span>
+                        From smart customization of pre-developed cross-platform standalone and client-server business applications to full-cycle development of feature-rich web applications along our client’s vision, we are uniquely positioned to deliver cost effective and reliable software solutions.
+                    </span>
+                    <span>
+                        Our expertise comprises a comprehensive set of open-source and proprietary technologies that allows us to execute the most challenging and complex projects and satisfy our client’s requirements, preferences and expectations.
+                    </span>
+                </div>
+                <div class="text">
+                    <span class="title">
+                        project management & analysis
+                    </span>
+                    <span>
+                        The management of software development is heavily dependent on four factors: People, Product, Process, and Project and in the Order of Dependency, the people factor ranks number one.
+                    </span>
+                    <span>
+                        Software development being a people centric activity requires good, competent project managers, and the manager selection is most crucial and critical.
+                    </span>
+                    <span>
+                        We provide mature and quality project management services focusing on vital elements like project communication, requirements gathering, knowledge transfer and change and risk management and reporting.
+                    </span>
+                </div>
+                <div class="text">
+                    <span class="title">
+                        technology infrastructure services
+                    </span>
+                    <span>
+                        Sound infrastructure is a fundamental requirement for delivering the applications which make business efficient, competitive and adaptable. With that in mind, we offer range of services to clients endeavoring to advance the capabilities of their existing secure, 24x7, high available information technology infrastructure and services.
+                    </span>
+                    <span>
+                        Our services areas cover Middleware and Web Services Engineering; Network Engineering, Operations and Support; Server and Storage Engineering, and Desktop Services.
+                    </span>
+                    <span>
+                        Robust security is a must to protect vital data and minimize risk, as new threats emerge all the time. We respond with security services including information security management, intrusion detection and protection, penetration testing management and support.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section__footer">
+            <p class="section__footer_text"><span class="blue">delivering</span> <span
+                    class="yellow">certainty</span></p>
+            <img src="assets/WorkIMG.jpg" class="section__footer_image">
+        </div>
+    </section>
     <section class="section" id="services">
         <div class="section__header">
             services
+            <div class="nav">
+                <img id="servicePrev" src="assets/PREV.png">
+                <img id="serviceNext" src="assets/NEXT.png">
+            </div>
         </div>
         <div>
-            <div class="section__body section__body--company">
-                <p class="text">
+            <div class="section__body section__body--company" id="sliderServices">
+                <div class="text">
                     <span class="title">enterprise application development</span>
                     <span>
                         Software has become critical to advancement in almost all areas of human endeavor and today’s software applications are far more complex; typically have graphical user interface and client-server architecture.
@@ -119,8 +182,8 @@
                         <li>Mobile</li>
                         <li>Objective C, iPhone SDK</li>
                     </ul>
-                </p>
-                <p class="text">
+                </div>
+                <div class="text">
                     <span class="title">
                         project management & analysis
                     </span>
@@ -144,8 +207,8 @@
                     <li>Business Analysis</li>
                     <li>Functional and Design Specification </li>
                 </ul>
-                </p>
-                <p class="text">
+                </div>
+                <div class="text">
                     <span class="title">
                         technology infrastructure services
                     </span>
@@ -178,7 +241,7 @@
                     <li>Vulnerability Assessment </li>
                     <li>NOC/Technical Support </li>
                 </ul>
-                </p>
+                </div>
             </div>
             <div class="section__body section__body--company hideMobile">
                 <div class="section__body__slideHeader">
@@ -186,7 +249,7 @@
                     <img src="assets/buttonA1.png">
                 </div>
             </div>
-            <div class="section__body--company" id="slideToggle" style="display: none">
+            <div class="section__body--company hideMobile" id="slideToggle" style="display: none">
                 <ul class="list">
                     <li>Client Server</li>
                     <li>Java, J2EE, JMS, Perl, PL/SQL, SQL</li>
@@ -255,6 +318,63 @@
         console.log($('.section__body__slideHeader'));
         $('.section__body__slideHeader').toggleClass('active');
         $('#slideToggle').slideToggle(1000)
+    })
+
+    $('#sliderServices').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: "#servicePrev",
+        nextArrow: "#serviceNext",
+        asNavFor: '#slideToggle',
+        responsive : [{
+            breakpoint: 960,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: 'unslick'
+        }]
+    })
+
+     $('#sliderWork').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        prevArrow: "#workPrev",
+        nextArrow: "#workNext",
+        responsive : [{
+            breakpoint: 960,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: 'unslick'
+        }]
+    })
+
+    $('#slideToggle').slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        draggable: false,
+        responsive : [{
+            breakpoint: 960,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: 'unslick'
+        }]
     })
 </script>
 </body>
