@@ -31,6 +31,23 @@
 
         <img src="assets/logo_right.png" class="headImg right">
     </header>
+    <header class="headerMobile">
+        <nav class="navigation" style="display: none;">
+            <ul>
+                <li data-section="home">Home</li>
+                <li data-section="company">Company</li>
+                <li data-section="work">Work</li>
+                <li data-section="services">Services</li>
+                <li data-section="contact">Contact</li>
+            </ul>
+        </nav>
+        <div class="headerMobileImages">
+            <div class="logo">
+                <img src="assets/logo_left.png">
+            </div>
+            <img class="imgRight" src="assets/logo_right.png">
+        </div>
+    </header>
     <section class="section" id="home">
         <div class="flash">
             <img src="assets/flash.png">
@@ -375,7 +392,15 @@
             breakpoint: 480,
             settings: 'unslick'
         }]
+    });
+
+    $('.headerMobileImages').click(function(){
+        $('.headerMobile .navigation').slideToggle(500);
     })
+
+    $('.headerMobile li').click(function() {
+        $('.headerMobile .navigation').slideToggle(500);
+    });
 </script>
 </body>
 </html>
