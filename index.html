@@ -266,7 +266,7 @@
                     <img src="assets/buttonA1.png">
                 </div>
             </div>
-            <div class="section__body--company hideMobile" id="slideToggle" style="display: none">
+            <div class="section__body--company hideMobile" id="slideToggle" style="height: 0; overflow: hidden;">
                 <ul class="list">
                     <li>Client Server</li>
                     <li>Java, J2EE, JMS, Perl, PL/SQL, SQL</li>
@@ -332,9 +332,12 @@
 
 
     $('.section__body__slideHeader').click(function(){
-        console.log($('.section__body__slideHeader'));
         $('.section__body__slideHeader').toggleClass('active');
-        $('#slideToggle').slideToggle(1000)
+        var el = $('#slideToggle'),
+            curHeight = el.height(),
+            autoHeight = curHeight > 0 ? 0 : el.css('height', 'auto').height();
+        el.height(curHeight).animate({height: autoHeight}, 1000);
+
     })
 
     $('#sliderServices').slick({
