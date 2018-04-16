@@ -80,7 +80,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1;
-    box-shadow: 0 6px 12px 1px rgba(255,255,255,1);
+    box-shadow: 0 6px 12px 1px rgba(255, 255, 255, 1);
   }
 
   .navigation {
@@ -146,9 +146,54 @@ body {
 
   .flash {
     text-align: center;
+    background: url("../assets/base.png") no-repeat;
+    background-size: contain;
+    position: relative;
 
-    img {
-      max-width: 98%;
+    @include mobile {
+      background: url("../assets/mobile_base.png") no-repeat;
+      background-size: contain;
+    }
+
+    #homeImgSlider {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    #homeTextSlider {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+
+      .slick-list, .slick-track {
+        height: 100%;
+      }
+
+      .textSlide {
+        text-align: left;
+        padding: 1.8% 4.2% 4% 4.5%;
+        box-sizing: border-box;
+        font-weight: 700;
+        font-size: calc(1.5em + 1vmin);
+        line-height: 1.2;
+
+        @include mobile {
+          font-size: calc(1em + 1vmin);
+        }
+
+        .white {
+          color: white;
+        }
+
+        .yellow {
+          color: $yellow;
+        }
+      }
     }
   }
 
@@ -202,6 +247,22 @@ body {
         flex: 0 0 31%;
         text-align: justify;
 
+        &.left {
+          text-align: left;
+        }
+
+        .blue {
+          color: $blue;
+        }
+
+        .yellow {
+          color: $yellow
+        }
+
+        .bold {
+          font-weight: 700;
+        }
+
         &.slick-slide {
           padding-left: 8px;
           padding-right: 8px;
@@ -228,6 +289,11 @@ body {
           &:first-child {
             padding-top: 24px;
           }
+        }
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
         }
 
         span {
@@ -375,13 +441,55 @@ body {
 
 .hideMobile {
   @include mobile {
-    display: none;
+    display: none!important;
   }
 }
 
 .showMobileOnly {
-  display: none;
+  display: none!important;
   @include mobile {
-    display: block;
+    display: block!important;
   }
 }
+
+#sliderWork.section__body {
+
+  .text {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      display: block;
+    }
+
+    span {
+      position: relative;
+      flex: 0 0 50%;
+      margin: 0 16px 0;
+
+      &:before {
+        opacity: 0;
+        position: absolute;
+        display: block;
+        height: calc(96% - 24px);
+        border-left: 1px solid;
+        content: '';
+        left: -25px;
+        top: 2%;
+      }
+      &:first-child {
+        border-bottom: 1px solid;
+        margin-bottom: 24px;
+      }
+    }
+
+    &.slick-active {
+      span {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
