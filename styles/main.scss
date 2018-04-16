@@ -375,6 +375,17 @@ body {
       border-bottom-width: 3px;
       border-right-width: 3px;
       border-bottom-right-radius: 24px;
+
+      &.contacts {
+        margin-top: 96px;
+      }
+    }
+
+    .footer-contacts {
+      position: absolute;
+      left: 0;
+      top: -104px;
+      color: $blue;
     }
 
     .homeCompanyLogo {
