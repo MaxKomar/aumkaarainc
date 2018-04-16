@@ -262,7 +262,14 @@ body {
         margin-top: 24px;
         border-bottom-width: 3px;
         border-right-width: 3px;
-        border-bottom-right-radius: 24px; } }
+        border-bottom-right-radius: 24px; }
+        .section__footer.contacts {
+          margin-top: 96px; } }
+    .section__footer .footer-contacts {
+      position: absolute;
+      left: 0;
+      top: -104px;
+      color: #005395; }
     .section__footer .homeCompanyLogo {
       max-height: 40px;
       padding: 8px 8px; }
