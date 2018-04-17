@@ -114,10 +114,6 @@ body {
     background: url("../assets/base.png") no-repeat;
     background-size: contain;
     position: relative; }
-    @media (max-width: 480px) {
-      .section .flash {
-        background: url("../assets/mobile_base.png") no-repeat;
-        background-size: contain; } }
     .section .flash #homeImgSlider {
       width: 100%;
       height: 100%; }
@@ -133,14 +129,15 @@ body {
         height: 100%; }
       .section .flash #homeTextSlider .textSlide {
         text-align: left;
-        padding: 1.8% 4.2% 4% 4.5%;
+        padding: 2.4% 2.2% 2.2% 9.2%;
         box-sizing: border-box;
         font-weight: 700;
-        font-size: calc(1.5em + 1vmin);
-        line-height: 1.2; }
+        font-size: calc(1em + 1.5vmin);
+        line-height: 1.2;
+        text-shadow: 3px 3px 2px #969696; }
         @media (max-width: 480px) {
           .section .flash #homeTextSlider .textSlide {
-            font-size: calc(1em + 1vmin); } }
+            font-size: calc(.8em + 1vmin); } }
         .section .flash #homeTextSlider .textSlide .white {
           color: white; }
         .section .flash #homeTextSlider .textSlide .yellow {
