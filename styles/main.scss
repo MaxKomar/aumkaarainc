@@ -161,10 +161,10 @@ body {
     background-size: contain;
     position: relative;
 
-    @include mobile {
-      background: url("../assets/mobile_base.png") no-repeat;
-      background-size: contain;
-    }
+    //@include mobile {
+    //  background: url("../assets/mobile_base.png") no-repeat;
+    //  background-size: contain;
+    //}
 
     #homeImgSlider {
       width: 100%;
@@ -187,14 +187,15 @@ body {
 
       .textSlide {
         text-align: left;
-        padding: 1.8% 4.2% 4% 4.5%;
+        padding: 2.4% 2.2% 2.2% 9.2%;
         box-sizing: border-box;
         font-weight: 700;
-        font-size: calc(1.5em + 1vmin);
+        font-size: calc(1em + 1.5vmin);
         line-height: 1.2;
+        text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
 
         @include mobile {
-          font-size: calc(1em + 1vmin);
+          font-size: calc(.8em + 1vmin);
         }
 
         .white {
