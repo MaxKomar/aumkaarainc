@@ -678,6 +678,9 @@ OpenStack, RightScale, ScaleXtreme and VMware vCloud Automation Suite.
             <img class="section__footer_image" src="assets/ContactIMG.jpg">
         </div>
     </section>
+    <footer class="footer">
+        <img src="assets/aumkaaraFOOTER.png">
+    </footer>
 </div>
 <script>
     $("nav ul li").click(function () {
@@ -700,7 +703,7 @@ OpenStack, RightScale, ScaleXtreme and VMware vCloud Automation Suite.
 
     $('#sliderServices').slick({
         dots: false,
-        infinite: true,
+        infinite: false,
         slidesToShow: 3,
         slidesToScroll: 3,
         prevArrow: "#servicePrev",
@@ -718,9 +721,9 @@ OpenStack, RightScale, ScaleXtreme and VMware vCloud Automation Suite.
         }]
     });
 
-    $('#sliderWork').slick({
+    var workSlider = $('#sliderWork').slick({
         dots: false,
-        infinite: true,
+        infinite: false,
         slidesToShow: 3,
         slidesToScroll: 3,
         prevArrow: "#workPrev",
@@ -736,6 +739,26 @@ OpenStack, RightScale, ScaleXtreme and VMware vCloud Automation Suite.
             settings: 'unslick'
         }]
     });
+
+    workSlider.on('edge', function(event, slick, currentSlide) {
+        console.log(arguments);
+        //If we're on the first slide hide the Previous button and show the Next
+        if (currentSlide === 0) {
+            $('#workPrev').hide();
+            $('#workNext').show();
+        } else if(currentSlide + slick.options.slidesToShow === slick.slideCount) {
+            $('#workNext').hide();
+            $('#workPrev').show();
+        } else {
+            $('#workNext').show();
+            $('#workPrev').show();
+        }
+        //
+        // //If we're on the last slide hide the Next button.
+        // if (slick.slideCount === currentSlide + 1) {
+        //     $('.slick-next').hide();
+        // }
+    })
 
     $('#slideToggle').slick({
         dots: false,
@@ -797,6 +820,12 @@ OpenStack, RightScale, ScaleXtreme and VMware vCloud Automation Suite.
             $('#sliderWork .slick-slide').css({height: sliderHeight + 40 + 'px'});
         }
     }
+
+    $('footer').click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
+    })
 </script>
 </body>
 </html>
